@@ -3,28 +3,28 @@ const games = document.querySelectorAll('#games img');
 const titles = document.querySelectorAll('#games a span');
 
 input.addEventListener('input', () => {
-  const searchTerm = input.value.toLowerCase();
-  games.forEach((game, index) => {
-    const title = titles[index];
-    if (game.alt.toLowerCase().includes(searchTerm)) {
-      game.parentNode.style.display = 'block';
-    } else {
-      game.parentNode.style.display = 'none';
-    }
-  });
+    const searchTerm = input.value.toLowerCase();
+    games.forEach((game, index) => {
+        const title = titles[index];
+        if (game.alt.toLowerCase().includes(searchTerm)) {
+            game.parentNode.style.display = 'block';
+        } else {
+            game.parentNode.style.display = 'none';
+        }
+    });
 });
 
 // Code to open game links in a new tab and create an iframe
 const gameLinks = document.querySelectorAll('#games a, .featured a');
 
 gameLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const gameUrl = link.getAttribute('href');
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const gameUrl = link.getAttribute('href');
 
-    // Open the game link in a new tab
-    const newTab = window.open('about:blank', '_blank');
-    newTab.document.write(`
+        // Open the game link in a new tab
+        const newTab = window.open('about:blank', '_blank');
+        newTab.document.write(`
       <style>
         html, body {
           margin: 0;
@@ -43,5 +43,5 @@ gameLinks.forEach((link) => {
       </style>
       <iframe src="${gameUrl}"></iframe>
     `);
-  });
+    });
 });
