@@ -147,7 +147,7 @@
 <body>
     <nav>
         <h1>Apps</h1>
-        <a href="https://games.mgn.lol/" class="nav-link">Home</a>
+        <a href="#" onclick="goBack()" class="nav-link">Home</a>
         <a class="version">v3.5</a>
     </nav>
 
@@ -179,12 +179,24 @@
     </div>
 
     <script>
-  function openGame(event, url) {
-    event.preventDefault();
-    var newWindow = window.open('about:blank');
-    newWindow.document.write('<html><head><title>ㅤ</title></head><body style="margin:0;"><iframe src="' + url + '" style="width:100%; height:100%; border:none;"></iframe></body></html>');
-    newWindow.document.close();
-  }
+        function openGame(event, url) {
+            event.preventDefault();
+            var newWindow = window.open('about:blank');
+            newWindow.document.write('<html><head><title>ㅤ</title></head><body style="margin:0;"><iframe src="' + url + '" style="width:100%; height:100%; border:none;"></iframe></body></html>');
+            newWindow.document.close();
+        }
+    </script>
+    <script>
+        function goBack() {
+            // Check if there's a previous page in the history
+            if (window.history.length > 1) {
+                // If yes, go back
+                window.history.back();
+            } else {
+                // If no previous page, you can redirect to a default URL
+                window.location.href = "https://games.mgn.lol/";
+            }
+        }
     </script>
 </body>
 </html>

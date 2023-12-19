@@ -74,7 +74,7 @@
 </head>
 <body>
   <nav>
-    <a href="https://games.mgn.lol" class="version">Home</a>
+      <a href="#" onclick="goBack()" class="nav-link">Home</a>
   </nav>
 
   <div class="help-container">
@@ -82,5 +82,17 @@
     <img src="https://i.ibb.co/8KMfRFg/image.png" alt="Help Image" class="help-image">
   </div>
 
+  <script>
+      function goBack() {
+          // Check if there's a previous page in the history
+          if (window.history.length > 1) {
+              // If yes, go back
+              window.history.back();
+          } else {
+              // If no previous page, you can redirect to a default URL
+              window.location.href = "https://games.mgn.lol/";
+          }
+      }
+  </script>
 </body>
 </html>
