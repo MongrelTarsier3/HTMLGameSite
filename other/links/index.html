@@ -20,14 +20,13 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
     <style>
-        /* Add the following CSS for the link in the navigation */
         nav .version {
             position: absolute;
             top: 10px;
             right: 35px;
             color: white;
-            text-decoration: none; /* Remove the underline */
-            font-size: 50px; /* Increase the font size */
+            text-decoration: none; 
+            font-size: 50px; 
         }
 
         body {
@@ -66,24 +65,23 @@
 </head>
 <body>
     <nav>
-        <a href="#" onclick="goBack()" class="nav-link">Home</a>
+        <a href="#" onclick="goback()" class="nav-link">Home</a>
     </nav>
     <h1>🔗 Links 🔗</h1>
     <ul>
-        <li><a href="https://games.mgn.lol/">🔗 games.mgn.lol</a></li>
-        <li><a href="http://monke.my.to">🔗 monke.my.to</a></li>
-        <li><a href="https://jungle.pages.dev">🔗 jungle.pages.dev</a></li>
+        <li><a href="https://games.mgn.lol/">🔗 mgn.lol</a></li>
+        <li><a href="https://fognetwork.xyz/">🔗 fognetwork.xyz</a></li>
+        <li><a href="https://fogon.top/">🔗 fogon.top</a></li>
+        <li><a href="https://staymadlol.netlify.app/">🔗 staymadlol.netlify.app</a></li>
+        <li><a href="https://jungle.pages.dev">🔗 jungle.pages.dev [MGN EXCLUSIVE]</a></li>
         <li><a href="">More Links Coming Soon
     </ul>
 
     <script>
-        function goBack() {
-            // Check if there's a previous page in the history
+        function goback() {
             if (window.history.length > 1) {
-                // If yes, go back
                 window.history.back();
             } else {
-                // If no previous page, you can redirect to a default URL
                 window.location.href = "https://games.mgn.lol/";
             }
         }
